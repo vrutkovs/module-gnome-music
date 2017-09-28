@@ -1,0 +1,23 @@
+document: modulemd
+version: 1
+data:
+    summary: GNOME Music Application Module
+    description: Music is the new GNOME music playing application.
+    license:
+        module: [ MIT ]
+    dependencies:
+        buildrequires:
+            gnome-runtime-f27: f27
+        requires:
+            gnome-runtime-f27: f27
+    profiles:
+        default:
+            rpms:
+                - gnome-music
+# If we wanted support for Python plugins
+#                - libpeas-loader-python3
+    components:
+        rpms:
+            gnome-music:
+                rationale: Core application
+                ref: e04d84a3c21604965575bb0e179736d93c9600fc
